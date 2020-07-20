@@ -10,7 +10,7 @@ const routes = require('./routes');
 const path = require('path');
 const helmet = require('helmet');
 const cors = require('cors');
-import './database';
+require('./database');
 
 class App {
 
