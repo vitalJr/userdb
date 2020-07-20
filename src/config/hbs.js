@@ -5,7 +5,7 @@ const path = require('path');
 
 const viewPath = path.resolve(__dirname, '..', 'view', 'emails');
 
-export default {
+module.exports = {
     viewEngine: exphbs.create({
         layoutsDir: viewPath,
         partialsDir: path.resolve(viewPath, 'partials'),
@@ -15,3 +15,14 @@ export default {
     viewPath,
     extName: '.hbs'
 }
+
+// export default {
+//     viewEngine: exphbs.create({
+//         layoutsDir: viewPath,
+//         partialsDir: path.resolve(viewPath, 'partials'),
+//         defaultLayout: 'deafault',
+//         extname: '.hbs'
+//     }),
+//     viewPath,
+//     extName: '.hbs'
+// }

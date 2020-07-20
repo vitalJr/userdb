@@ -1,5 +1,7 @@
-import nodemailer from 'nodemailer';
-import mailConfig from '../config/mail';
+// import nodemailer from 'nodemailer';
+// import mailConfig from '../config/mail';
+const nodemailer =  require('nodemailer');
+const mailConfig =  require('../config/mail');
 
 class Mail {
 
@@ -17,4 +19,5 @@ class Mail {
 
 }
 
-export default new Mail();
+module.exports = new Mail();
+// export default new Mail();
