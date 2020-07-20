@@ -1,6 +1,9 @@
-import { verify, decode } from "jsonwebtoken";
-import jwt from "../config/jwt";
-import User from "../models/User";
+// import { verify, decode } from "jsonwebtoken";
+// import jwt from "../config/jwt";
+// import User from "../models/User";
+
+const {verify, decode} = require('jsonwebtoken');
+const jwt = require('../config/jwt');
 
 export default async function (req, res, next) {
     const authHeader = req.headers.authorization;

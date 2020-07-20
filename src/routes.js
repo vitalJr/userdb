@@ -1,12 +1,22 @@
-import { Router } from 'express';
-import UserController from './controllers/UserController';
-import AuthController from './controllers/AuthController';
-import checkCredencials from './middlewares/checkCredencials';
-import RecoveryController from './controllers/RecoveryController';
-import FileController from './controllers/FileController';
+// import { Router } from 'express';
+// import UserController from './controllers/UserController';
+// import AuthController from './controllers/AuthController';
+// import checkCredencials from './middlewares/checkCredencials';
+// import RecoveryController from './controllers/RecoveryController';
+// import FileController from './controllers/FileController';
 
-import multer from 'multer';
-import multerConfig from './config/multer';
+// import multer from 'multer';
+// import multerConfig from './config/multer';
+
+const {Router} = require('express');
+const UserController = require('./controllers/UserController');
+const AuthController = require('./controllers/AuthController');
+const checkCredencials = require('./middlewares/checkCredencials');
+const RecoveryController = require('./controllers/RecoveryController');
+const FileController = require('./controllers/FileController');
+
+const multer = require('multer');
+const multerConfig = require('./config/multer');
 
 const upload = multer(multerConfig);
 
@@ -29,4 +39,5 @@ routes.delete('/users', UserController.delete);
 
 
 
-export default routes;
+// export default routes;
+module.exports = routes;

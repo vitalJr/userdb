@@ -1,8 +1,15 @@
-import express from 'express';
-import routes from './routes';
-import path from 'path';
-import helmet from 'helmet';
-import cors from 'cors';
+// import express from 'express';
+// import routes from './routes';
+// import path from 'path';
+// import helmet from 'helmet';
+// import cors from 'cors';
+// import './database';
+
+const express = require('express');
+const routes = require('./routes');
+const path = require('path');
+const helmet = require('helmet');
+const cors = require('cors');
 import './database';
 
 class App {
@@ -40,4 +47,5 @@ class App {
 
 }
 
-export default new App().server;
+// export default new App().server;
+module.exports = new App().server;

@@ -1,8 +1,14 @@
-import User from "../models/User";
-import bcryptjs from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import { json } from 'express';
-import jwtConfig from '../config/jwt';
+// import User from "../models/User";
+// import bcryptjs from 'bcryptjs';
+// import jwt from 'jsonwebtoken';
+// import { json } from 'express';
+// import jwtConfig from '../config/jwt';
+
+const User = require('../models/User');
+const bcryptjs = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const { json } = require('express');
+const jwtConfig = require('../config/jwt');
 
 class AuthController {
     async store(req, res) {
@@ -35,4 +41,5 @@ class AuthController {
     }
 }
 
-export default new AuthController();
+// export default new AuthController();
+module.exports = new AuthController();

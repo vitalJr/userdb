@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 class Database {
     constructor() {
@@ -28,5 +29,6 @@ class Database {
         )
     }
 }
+
 
 export default new Database();

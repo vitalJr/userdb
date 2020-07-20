@@ -1,4 +1,5 @@
-import File from '../models/File';
+// import File from '../models/File';
+const File = require('../models/File');
 
 class FileController {
 
@@ -13,4 +14,5 @@ class FileController {
 
 }
 
-export default new FileController();
+module.exports = new FileController();
+// export default new FileController();

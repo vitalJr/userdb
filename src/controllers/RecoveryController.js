@@ -1,8 +1,14 @@
-import User from '../models/User'
-import crypto from 'crypto';
-import { addMinutes, isAfter } from 'date-fns'
-import mail from '../helpers/Mail';
-import mailConfig from '../config/mail';
+// import User from '../models/User'
+// import crypto from 'crypto';
+// import { addMinutes, isAfter } from 'date-fns'
+// import mail from '../helpers/Mail';
+// import mailConfig from '../config/mail';
+
+const User = require('../models/User');
+const crypt = require('crypto');
+const {addMinutes, isAfter} = require('date-fns');
+const mail = require('../helpers/Mail');
+const mailConfig = require('../config/mail');
 
 class RecoveryController {
     async store(req, res) {
@@ -59,4 +65,5 @@ class RecoveryController {
 
 }
 
-export default new RecoveryController();
+// export default new RecoveryController();
+module.exports = new RecoveryController();

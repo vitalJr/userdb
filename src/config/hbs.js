@@ -1,5 +1,7 @@
-import exphbs from 'express-handlebars';
-import path from 'path';
+// import exphbs from 'express-handlebars';
+// import path from 'path';
+const exphbs = require('express-handlebars');
+const path = require('path');
 
 const viewPath = path.resolve(__dirname, '..', 'view', 'emails');
 
